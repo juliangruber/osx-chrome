@@ -12,7 +12,6 @@ module.exports = (opts, cb) => {
     const args = [
       opts.proxyServer && `--proxy-server=${opts.proxyServer}`,
       `--user-data-dir=${opts.dataDir || `/tmp/${Math.random().toString(16).slice(2)}`}`,
-      opts.dataDir && `--user-data-dir=${opts.dataDir}`,
       '--disable-restore-session-state',
       '--no-default-browser-check',
       '--start-maximized',
