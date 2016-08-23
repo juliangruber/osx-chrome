@@ -4,6 +4,9 @@
   "description": "Launch a fresh Google Chrome on OSX",
   "license": "MIT",
   "repository": "juliangruber/osx-chrome",
+  "scripts": {
+    "test": "standard"
+  },
   "dependencies": {
     "osx-find-executable": "^1.0.0",
     "osx-foreground": "^1.0.1"
