@@ -28,7 +28,7 @@ Google Chrome needs to be installed on your system as well.
 Options:
 
 - `display`: Set process.env.DISPLAY to `:${opts.display}` for xvfb support
-- `proxyServer`: Pass proxy settings
+- `proxy`: Proxy server settings
 - `dataDir`: Data dir, defaults to `/tmp/$RANDOM`
 - `background`: Don't manually foreground the browser
 

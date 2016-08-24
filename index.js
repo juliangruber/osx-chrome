@@ -6,11 +6,13 @@ module.exports = (opts, cb) => {
   const env = Object.assign({}, process.env)
   if (opts.display) env.DISPLAY = `:${opts.display}`
 
+  const proxy = opts.proxy || opts.proxyServer
+
   find('com.google.Chrome', (err, exec) => {
     if (err) return cb(err)
 
     const args = [
-      opts.proxyServer && `--proxy-server=${opts.proxyServer}`,
+      proxy && `--proxy-server=${proxy}`,
       `--user-data-dir=${opts.dataDir || `/tmp/${Math.random().toString(16).slice(2)}`}`,
       '--disable-restore-session-state',
       '--no-default-browser-check',
